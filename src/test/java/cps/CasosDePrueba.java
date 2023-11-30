@@ -193,6 +193,43 @@ public class CasosDePrueba {
 
 
     }
+
+    @Test
+    @Order(5)
+    public void CP005_comprar_producto_carro() throws InterruptedException {
+
+        By localizadorMiCuenta = By.xpath(" //span[@class='caret']");
+        Thread.sleep(2000);
+        WebElement btnMiCuenta = driver.findElement(localizadorMiCuenta);
+        Thread.sleep(2000);
+        btnMiCuenta.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys("cmoraga.ochoa@gmail.com");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("123456");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@value='Login']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//i[@class='fa fa-home']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='image']//img[@title='MacBook']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@id='button-cart']")).click();
+        Thread.sleep(2000);
+
+
+        String resultadoEsperado = "Success: You have added MacBook to your shopping cart!";
+        Thread.sleep(2000);
+        String resultadoActual = driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']")).getText();
+        Thread.sleep(1000);
+        System.out.println("Esperado: "+ resultadoEsperado);
+        System.out.println("Actual: "+ resultadoActual);
+        Assertions.assertEquals(resultadoEsperado, resultadoActual.substring(0,54));
+
+
+    }
 }
 
 
