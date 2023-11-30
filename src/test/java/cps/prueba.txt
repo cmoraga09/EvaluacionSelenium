@@ -1,0 +1,7 @@
+Evaluación nro 1 Curso Selenium.
+Nota: Leer el enunciado descrito a continuación y construir un proyecto Java con Gradle que implemente todas las librerías necesarias (dependencias) para poder lanzar los casos de prueba desde el proyecto, el cual debe cumplir con lo siguiente:
+Aplicación bajo testing: Sitio a elección
+Realizar 5 casos de prueba para el sitio seleccionado.
+Cada caso de prueba debe realizar las búsquedas de elemento necesarias para realizar el caso, además de las @anotaciones y aserciones (Asserts) requeridas.
+
+ La aplicación debe ser comprimida y enviada por correo de la siguiente forma: nombre_apellido_prueba1 o en su defecto compartir el link del repositorio de github del proyecto.
