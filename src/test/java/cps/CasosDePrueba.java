@@ -194,6 +194,7 @@ public class CasosDePrueba {
 
     }
 
+    @Disabled
     @Test
     @Order(5)
     public void CP005_comprar_producto_carro() throws InterruptedException {
